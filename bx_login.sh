@@ -15,7 +15,7 @@ fi
 echo "Deploy pods"
 
 echo "bx login  -a $CF_TARGET_URL"
-bx login -a "$CF_TARGET_URL"  --apikey "$ApiKey" 
+bx login -a "$CF_TARGET_URL"  --apikey "$ApiKey"  -s "BLUEMIX_SPACE"
 if [ $? -ne 0 ]; then
   echo "Failed to authenticate to Bluemix"
   exit 1
